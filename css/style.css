@@ -57,6 +57,23 @@ input,
     --MARGIN: clamp(1em, 2.5vh, 1.5em)0;
  }
 
+ @media (prefers-color-scheme: dark) {
+   :root {
+    --BGCOLOR: #000;
+    --BGCOLOR-FADE: gray;
+    --BODY-BGCOLOR: #333;
+    --FONT-COLOR: #fff;
+    --BORDER-COLOR: #ccc;
+    --HIGHTLIGHT-COLOR: rgb(255, 255, 255);
+    --LINK-COLOR: #fff;
+    --LINK-HOVER: hsla(0, 0%, 100%, 0.6);
+    --LINK-ACTIVE: #000;
+    --HEADER-BGCOLOR: #333;
+    --HEADER-COLOR: #fff;
+    --NAV-BGCOLOR: #333;
+   }
+ }
+
  /* || UTILITY CLASSES */
  .offscreen {
     position: absolute;
@@ -188,4 +205,15 @@ input,
       transform: skew(-10deg, -5deg)
       scaleY(1);
     }
+ }
+
+      /* || FOOTER */
+      
+ .footer {
+   position: sticky;
+   bottom: 0;
+   background-color: var(--HEADER-BGCOLOR);
+   color: var(--HEADER-COLOR);
+   padding: var(--PADDING-TB) var(--PADDING-SIDE);
+   text-align: center;
  }
